@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "products",
   "info": {
-    "name": "Category",
+    "name": "Product",
     "description": ""
   },
   "options": {
@@ -11,30 +11,12 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "title": {
+    "name": {
       "type": "string"
-    },
-    "options": {
-      "type": "json"
-    },
-    "categories": {
-      "collection": "category",
-      "via": "category"
     },
     "category": {
       "model": "category",
-      "via": "categories"
-    },
-    "isRoot": {
-      "type": "boolean",
-      "default": true
-    },
-    "slug": {
-      "type": "string"
-    },
-    "products": {
-      "via": "category",
-      "collection": "product"
+      "via": "products"
     },
     "cover": {
       "model": "file",
@@ -46,6 +28,26 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "newprice": {
+      "type": "decimal",
+      "default": -12,
+      "min": 0
+    },
+    "oldprice": {
+      "type": "decimal"
+    },
+    "reviews": {
+      "collection": "reviews",
+      "via": "product"
+    },
+    "default_cart_quantity": {
+      "type": "integer",
+      "default": 1
+    },
+    "available_quantity": {
+      "type": "integer",
+      "default": 0
     }
   }
 }
