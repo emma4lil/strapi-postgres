@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "art_categories",
+  "info": {
+    "name": "art_categories",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "categories": {
+      "type": "json"
+    }
+  }
+}
