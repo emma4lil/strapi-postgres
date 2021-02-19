@@ -567,6 +567,12 @@
                     "type": "string"
                   }
                 },
+                "pay_in_bits_entries": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "created_by": {
                   "type": "string"
                 },

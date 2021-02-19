@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pay_in_bits",
+  "info": {
+    "name": "Pay In Bits",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "product": {
+      "model": "product",
+      "via": "pay_in_bit"
+    },
+    "minimum_payable_amount": {
+      "type": "decimal"
+    },
+    "maximum_allowed_hold": {
+      "type": "integer",
+      "default": 60
+    },
+    "pay_in_bits_records": {
+      "via": "pay_in_bit",
+      "collection": "pay-in-bits-entries"
+    },
+    "Title": {
+      "type": "string"
+    }
+  }
+}

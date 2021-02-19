@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pay_in_bits_entries",
+  "info": {
+    "name": "Pay In Bits  Entries",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "pay_in_bit": {
+      "model": "pay-in-bits",
+      "via": "pay_in_bits_records"
+    },
+    "belongs_to": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "pay_in_bits_entries"
+    },
+    "amount_paid": {
+      "type": "integer"
+    }
+  }
+}

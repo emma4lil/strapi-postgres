@@ -687,6 +687,43 @@
             "type": "integer",
             "default": 0
           },
+          "pay_in_bit": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "product": {
+                "type": "string"
+              },
+              "minimum_payable_amount": {
+                "type": "number"
+              },
+              "maximum_allowed_hold": {
+                "type": "integer"
+              },
+              "pay_in_bits_records": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "Title": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -721,6 +758,9 @@
           "available_quantity": {
             "type": "integer",
             "default": 0
+          },
+          "pay_in_bit": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

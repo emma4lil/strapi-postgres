@@ -48,6 +48,10 @@
     "available_quantity": {
       "type": "integer",
       "default": 0
+    },
+    "pay_in_bit": {
+      "via": "product",
+      "model": "pay-in-bits"
     }
   }
 }

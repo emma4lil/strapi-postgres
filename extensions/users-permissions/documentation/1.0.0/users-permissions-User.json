@@ -1299,6 +1299,37 @@
                 }
               }
             }
+          },
+          "pay_in_bits_entries": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "pay_in_bit": {
+                  "type": "string"
+                },
+                "belongs_to": {
+                  "type": "string"
+                },
+                "amount_paid": {
+                  "type": "integer"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -1342,6 +1373,12 @@
             "type": "string"
           },
           "arts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "pay_in_bits_entries": {
             "type": "array",
             "items": {
               "type": "string"

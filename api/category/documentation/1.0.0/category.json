@@ -673,6 +673,9 @@
                 "available_quantity": {
                   "type": "integer"
                 },
+                "pay_in_bit": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },

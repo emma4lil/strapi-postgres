@@ -62,6 +62,10 @@
     "arts": {
       "via": "user",
       "collection": "art"
+    },
+    "pay_in_bits_entries": {
+      "via": "belongs_to",
+      "collection": "pay-in-bits-entries"
     }
   }
 }
