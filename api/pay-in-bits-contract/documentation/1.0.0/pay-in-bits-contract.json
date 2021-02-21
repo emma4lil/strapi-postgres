@@ -1,12 +1,12 @@
 {
   "paths": {
-    "/pay-in-bits": {
+    "/pay-in-bits-contracts": {
       "get": {
         "deprecated": false,
-        "description": "Find all the pay-in-bits's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve pay-in-bits document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Pay-in-bits"
+          "Pay-in-bits-contract"
         ],
         "parameters": [
           {
@@ -195,10 +195,10 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new pay-in-bits record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve pay-in-bits document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Pay-in-bits"
+          "Pay-in-bits-contract"
         ],
         "requestBody": {
           "description": "",
@@ -252,20 +252,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPay-in-bits"
+                "$ref": "#/components/schemas/NewPay-in-bits-contract"
               }
             }
           }
         }
       }
     },
-    "/pay-in-bits/count": {
+    "/pay-in-bits-contracts/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of pay-in-bits documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve pay-in-bits document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -311,18 +311,18 @@
         },
         "summary": "",
         "tags": [
-          "Pay-in-bits"
+          "Pay-in-bits-contract"
         ],
         "parameters": []
       }
     },
-    "/pay-in-bits/{id}": {
+    "/pay-in-bits-contracts/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one pay-in-bits record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve pay-in-bits document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Pay-in-bits"
+          "Pay-in-bits-contract"
         ],
         "parameters": [
           {
@@ -385,10 +385,10 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single pay-in-bits record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve pay-in-bits document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Pay-in-bits"
+          "Pay-in-bits-contract"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPay-in-bits"
+                "$ref": "#/components/schemas/NewPay-in-bits-contract"
               }
             }
           }
@@ -462,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single pay-in-bits record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single pay-in-bits based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Pay-in-bits"
+          "Pay-in-bits-contract"
         ],
         "parameters": [
           {
@@ -527,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Pay-in-bits": {
+      "Pay-in-bits-contract": {
         "required": [
           "id"
         ],
@@ -535,7 +535,7 @@
           "id": {
             "type": "string"
           },
-          "product": {
+          "pay_in_bit": {
             "required": [
               "id"
             ],
@@ -543,35 +543,23 @@
               "id": {
                 "type": "string"
               },
-              "name": {
+              "product": {
                 "type": "string"
               },
-              "category": {
-                "type": "string"
-              },
-              "cover": {
-                "type": "string"
-              },
-              "newprice": {
+              "minimum_payable_amount": {
                 "type": "number"
               },
-              "oldprice": {
-                "type": "number"
+              "maximum_allowed_hold": {
+                "type": "integer"
               },
-              "reviews": {
+              "Title": {
+                "type": "string"
+              },
+              "pay_in_bits_contracts": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "default_cart_quantity": {
-                "type": "integer"
-              },
-              "available_quantity": {
-                "type": "integer"
-              },
-              "pay_in_bit": {
-                "type": "string"
               },
               "published_at": {
                 "type": "string"
@@ -584,17 +572,84 @@
               }
             }
           },
-          "minimum_payable_amount": {
-            "type": "number"
+          "user": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "arts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "pay_in_bits_contracts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
-          "maximum_allowed_hold": {
+          "status": {
+            "type": "string",
+            "default": "pending",
+            "enum": [
+              "running",
+              "cancelled",
+              "finished",
+              "expired",
+              "refunded",
+              "pending"
+            ]
+          },
+          "paid_amount": {
+            "type": "number",
+            "default": 0
+          },
+          "duration": {
             "type": "integer",
             "default": 60
           },
-          "Title": {
-            "type": "string"
-          },
-          "pay_in_bits_contracts": {
+          "pay_in_bits_entries": {
             "type": "array",
             "items": {
               "required": [
@@ -604,34 +659,11 @@
                 "id": {
                   "type": "string"
                 },
-                "pay_in_bit": {
+                "pay_in_bits_contract": {
                   "type": "string"
                 },
-                "user": {
-                  "type": "string"
-                },
-                "status": {
-                  "type": "string",
-                  "enum": [
-                    "running",
-                    "cancelled",
-                    "finished",
-                    "expired",
-                    "refunded",
-                    "pending"
-                  ]
-                },
-                "paid_amount": {
+                "amount_paid": {
                   "type": "number"
-                },
-                "duration": {
-                  "type": "integer"
-                },
-                "pay_in_bits_entries": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
                 },
                 "published_at": {
                   "type": "string"
@@ -651,22 +683,35 @@
           }
         }
       },
-      "NewPay-in-bits": {
+      "NewPay-in-bits-contract": {
         "properties": {
-          "product": {
+          "pay_in_bit": {
             "type": "string"
           },
-          "minimum_payable_amount": {
-            "type": "number"
+          "user": {
+            "type": "string"
           },
-          "maximum_allowed_hold": {
+          "status": {
+            "type": "string",
+            "default": "pending",
+            "enum": [
+              "running",
+              "cancelled",
+              "finished",
+              "expired",
+              "refunded",
+              "pending"
+            ]
+          },
+          "paid_amount": {
+            "type": "number",
+            "default": 0
+          },
+          "duration": {
             "type": "integer",
             "default": 60
           },
-          "Title": {
-            "type": "string"
-          },
-          "pay_in_bits_contracts": {
+          "pay_in_bits_entries": {
             "type": "array",
             "items": {
               "type": "string"

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/pay-in-bits-contracts",
+      "handler": "pay-in-bits-contract.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pay-in-bits-contracts/count",
+      "handler": "pay-in-bits-contract.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pay-in-bits-contracts/:id",
+      "handler": "pay-in-bits-contract.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/pay-in-bits-contracts",
+      "handler": "pay-in-bits-contract.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/pay-in-bits-contracts/:id",
+      "handler": "pay-in-bits-contract.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/pay-in-bits-contracts/:id",
+      "handler": "pay-in-bits-contract.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

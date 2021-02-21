@@ -704,14 +704,14 @@
               "maximum_allowed_hold": {
                 "type": "integer"
               },
-              "pay_in_bits_records": {
+              "Title": {
+                "type": "string"
+              },
+              "pay_in_bits_contracts": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "Title": {
-                "type": "string"
               },
               "published_at": {
                 "type": "string"

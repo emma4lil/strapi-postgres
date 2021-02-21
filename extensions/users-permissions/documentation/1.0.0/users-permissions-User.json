@@ -1300,7 +1300,7 @@
               }
             }
           },
-          "pay_in_bits_entries": {
+          "pay_in_bits_contracts": {
             "type": "array",
             "items": {
               "required": [
@@ -1313,11 +1313,31 @@
                 "pay_in_bit": {
                   "type": "string"
                 },
-                "belongs_to": {
+                "user": {
                   "type": "string"
                 },
-                "amount_paid": {
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "running",
+                    "cancelled",
+                    "finished",
+                    "expired",
+                    "refunded",
+                    "pending"
+                  ]
+                },
+                "paid_amount": {
+                  "type": "number"
+                },
+                "duration": {
                   "type": "integer"
+                },
+                "pay_in_bits_entries": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "published_at": {
                   "type": "string"
@@ -1378,7 +1398,7 @@
               "type": "string"
             }
           },
-          "pay_in_bits_entries": {
+          "pay_in_bits_contracts": {
             "type": "array",
             "items": {
               "type": "string"

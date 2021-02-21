@@ -567,7 +567,7 @@
                     "type": "string"
                   }
                 },
-                "pay_in_bits_entries": {
+                "pay_in_bits_contracts": {
                   "type": "array",
                   "items": {
                     "type": "string"

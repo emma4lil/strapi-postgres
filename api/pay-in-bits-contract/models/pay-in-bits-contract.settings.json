@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pay_in_bits_contracts",
+  "info": {
+    "name": "Pay In Bits Contract",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "pay_in_bit": {
+      "model": "pay-in-bits",
+      "via": "pay_in_bits_contracts"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "pay_in_bits_contracts"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "running",
+        "cancelled",
+        "finished",
+        "expired",
+        "refunded",
+        "pending"
+      ],
+      "default": "pending"
+    },
+    "paid_amount": {
+      "type": "decimal",
+      "default": 0
+    },
+    "duration": {
+      "type": "integer",
+      "default": 60
+    },
+    "pay_in_bits_entries": {
+      "collection": "pay-in-bits-entries",
+      "via": "pay_in_bits_contract"
+    }
+  }
+}

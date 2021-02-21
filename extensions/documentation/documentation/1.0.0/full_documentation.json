@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/19/2021 12:44:44 AM"
+    "x-generation-date": "02/20/2021 3:42:06 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -1364,6 +1364,530 @@
         "summary": "",
         "tags": [
           "Category"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/pay-in-bits-contracts": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Pay-in-bits-contract"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Pay-in-bits-contract"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewPay-in-bits-contract"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pay-in-bits-contracts/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Pay-in-bits-contract"
+        ],
+        "parameters": []
+      }
+    },
+    "/pay-in-bits-contracts/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Pay-in-bits-contract"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Pay-in-bits-contract"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewPay-in-bits-contract"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Pay-in-bits-contract"
         ],
         "parameters": [
           {
@@ -5781,7 +6305,7 @@
                   "type": "string"
                 }
               },
-              "pay_in_bits_entries": {
+              "pay_in_bits_contracts": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -6195,7 +6719,7 @@
           }
         }
       },
-      "Pay-in-bits-entries": {
+      "Pay-in-bits-contract": {
         "required": [
           "id"
         ],
@@ -6220,14 +6744,14 @@
               "maximum_allowed_hold": {
                 "type": "integer"
               },
-              "pay_in_bits_records": {
+              "Title": {
+                "type": "string"
+              },
+              "pay_in_bits_contracts": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "Title": {
-                "type": "string"
               },
               "published_at": {
                 "type": "string"
@@ -6240,7 +6764,7 @@
               }
             }
           },
-          "belongs_to": {
+          "user": {
             "required": [
               "id",
               "username",
@@ -6283,7 +6807,7 @@
                   "type": "string"
                 }
               },
-              "pay_in_bits_entries": {
+              "pay_in_bits_contracts": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -6297,8 +6821,164 @@
               }
             }
           },
+          "status": {
+            "type": "string",
+            "default": "pending",
+            "enum": [
+              "running",
+              "cancelled",
+              "finished",
+              "expired",
+              "refunded",
+              "pending"
+            ]
+          },
+          "paid_amount": {
+            "type": "number",
+            "default": 0
+          },
+          "duration": {
+            "type": "integer",
+            "default": 60
+          },
+          "pay_in_bits_entries": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "pay_in_bits_contract": {
+                  "type": "string"
+                },
+                "amount_paid": {
+                  "type": "number"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewPay-in-bits-contract": {
+        "properties": {
+          "pay_in_bit": {
+            "type": "string"
+          },
+          "user": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "default": "pending",
+            "enum": [
+              "running",
+              "cancelled",
+              "finished",
+              "expired",
+              "refunded",
+              "pending"
+            ]
+          },
+          "paid_amount": {
+            "type": "number",
+            "default": 0
+          },
+          "duration": {
+            "type": "integer",
+            "default": 60
+          },
+          "pay_in_bits_entries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
+      "Pay-in-bits-entries": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "pay_in_bits_contract": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "pay_in_bit": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "running",
+                  "cancelled",
+                  "finished",
+                  "expired",
+                  "refunded",
+                  "pending"
+                ]
+              },
+              "paid_amount": {
+                "type": "number"
+              },
+              "duration": {
+                "type": "integer"
+              },
+              "pay_in_bits_entries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "amount_paid": {
-            "type": "integer"
+            "type": "number"
           },
           "published_at": {
             "type": "string",
@@ -6308,14 +6988,11 @@
       },
       "NewPay-in-bits-entries": {
         "properties": {
-          "pay_in_bit": {
-            "type": "string"
-          },
-          "belongs_to": {
+          "pay_in_bits_contract": {
             "type": "string"
           },
           "amount_paid": {
-            "type": "integer"
+            "type": "number"
           },
           "published_at": {
             "type": "string",
@@ -6393,7 +7070,10 @@
             "type": "integer",
             "default": 60
           },
-          "pay_in_bits_records": {
+          "Title": {
+            "type": "string"
+          },
+          "pay_in_bits_contracts": {
             "type": "array",
             "items": {
               "required": [
@@ -6406,11 +7086,31 @@
                 "pay_in_bit": {
                   "type": "string"
                 },
-                "belongs_to": {
+                "user": {
                   "type": "string"
                 },
-                "amount_paid": {
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "running",
+                    "cancelled",
+                    "finished",
+                    "expired",
+                    "refunded",
+                    "pending"
+                  ]
+                },
+                "paid_amount": {
+                  "type": "number"
+                },
+                "duration": {
                   "type": "integer"
+                },
+                "pay_in_bits_entries": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "published_at": {
                   "type": "string"
@@ -6423,9 +7123,6 @@
                 }
               }
             }
-          },
-          "Title": {
-            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -6445,14 +7142,14 @@
             "type": "integer",
             "default": 60
           },
-          "pay_in_bits_records": {
+          "Title": {
+            "type": "string"
+          },
+          "pay_in_bits_contracts": {
             "type": "array",
             "items": {
               "type": "string"
             }
-          },
-          "Title": {
-            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -6656,14 +7353,14 @@
               "maximum_allowed_hold": {
                 "type": "integer"
               },
-              "pay_in_bits_records": {
+              "Title": {
+                "type": "string"
+              },
+              "pay_in_bits_contracts": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "Title": {
-                "type": "string"
               },
               "published_at": {
                 "type": "string"
@@ -6923,7 +7620,7 @@
                     "type": "string"
                   }
                 },
-                "pay_in_bits_entries": {
+                "pay_in_bits_contracts": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -7091,7 +7788,7 @@
               }
             }
           },
-          "pay_in_bits_entries": {
+          "pay_in_bits_contracts": {
             "type": "array",
             "items": {
               "required": [
@@ -7104,11 +7801,31 @@
                 "pay_in_bit": {
                   "type": "string"
                 },
-                "belongs_to": {
+                "user": {
                   "type": "string"
                 },
-                "amount_paid": {
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "running",
+                    "cancelled",
+                    "finished",
+                    "expired",
+                    "refunded",
+                    "pending"
+                  ]
+                },
+                "paid_amount": {
+                  "type": "number"
+                },
+                "duration": {
                   "type": "integer"
+                },
+                "pay_in_bits_entries": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "published_at": {
                   "type": "string"
@@ -7169,7 +7886,7 @@
               "type": "string"
             }
           },
-          "pay_in_bits_entries": {
+          "pay_in_bits_contracts": {
             "type": "array",
             "items": {
               "type": "string"

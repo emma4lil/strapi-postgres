@@ -22,12 +22,12 @@
       "type": "integer",
       "default": 60
     },
-    "pay_in_bits_records": {
-      "via": "pay_in_bit",
-      "collection": "pay-in-bits-entries"
-    },
     "Title": {
       "type": "string"
+    },
+    "pay_in_bits_contracts": {
+      "via": "pay_in_bit",
+      "collection": "pay-in-bits-contract"
     }
   }
 }

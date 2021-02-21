@@ -11,17 +11,12 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "pay_in_bit": {
-      "model": "pay-in-bits",
-      "via": "pay_in_bits_records"
-    },
-    "belongs_to": {
-      "plugin": "users-permissions",
-      "model": "user",
-      "via": "pay_in_bits_entries"
+    "pay_in_bits_contract": {
+      "via": "pay_in_bits_entries",
+      "model": "pay-in-bits-contract"
     },
     "amount_paid": {
-      "type": "integer"
+      "type": "decimal"
     }
   }
 }
