@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wallets",
+  "info": {
+    "name": "Wallets"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "wallet"
+    },
+    "balance": {
+      "type": "decimal",
+      "default": 0,
+      "min": 0
+    },
+    "wallet_transactions": {
+      "via": "wallet",
+      "collection": "wallet-transactions"
+    }
+  }
+}

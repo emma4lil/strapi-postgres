@@ -711,6 +711,15 @@
                   "type": "string"
                 }
               },
+              "wallet": {
+                "type": "string"
+              },
+              "wallet_transactions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "created_by": {
                 "type": "string"
               },

@@ -66,6 +66,14 @@
     "pay_in_bits_contracts": {
       "via": "user",
       "collection": "pay-in-bits-contract"
+    },
+    "wallet": {
+      "via": "user",
+      "model": "wallets"
+    },
+    "wallet_transactions": {
+      "via": "user",
+      "collection": "wallet-transactions"
     }
   }
 }

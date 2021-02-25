@@ -1350,6 +1350,85 @@
                 }
               }
             }
+          },
+          "wallet": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "balance": {
+                "type": "number"
+              },
+              "wallet_transactions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "wallet_transactions": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "wallet": {
+                  "type": "string"
+                },
+                "remarks": {
+                  "type": "string"
+                },
+                "tx_type": {
+                  "type": "string",
+                  "enum": [
+                    "debit",
+                    "credit",
+                    "refund"
+                  ]
+                },
+                "amount": {
+                  "type": "number"
+                },
+                "ref": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "balance": {
+                  "type": "number"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -1399,6 +1478,15 @@
             }
           },
           "pay_in_bits_contracts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "wallet": {
+            "type": "string"
+          },
+          "wallet_transactions": {
             "type": "array",
             "items": {
               "type": "string"
